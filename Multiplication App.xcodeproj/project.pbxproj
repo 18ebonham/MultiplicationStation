@@ -14,6 +14,7 @@
 		0F4479D41F71812A00393DAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F4479D21F71812A00393DAC /* LaunchScreen.storyboard */; };
 		0F4479DF1F71812A00393DAC /* Multiplication_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4479DE1F71812A00393DAC /* Multiplication_AppTests.swift */; };
 		0F4479EA1F71812A00393DAC /* Multiplication_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4479E91F71812A00393DAC /* Multiplication_AppUITests.swift */; };
+		0F4479FE1F73097100393DAC /* MutliStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4479FD1F73097100393DAC /* MutliStation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		0F4479E51F71812A00393DAC /* Multiplication AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Multiplication AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F4479E91F71812A00393DAC /* Multiplication_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multiplication_AppUITests.swift; sourceTree = "<group>"; };
 		0F4479EB1F71812A00393DAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F4479FD1F73097100393DAC /* MutliStation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutliStation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				0F4479C91F71812A00393DAC /* AppDelegate.swift */,
 				0F4479CB1F71812A00393DAC /* ViewController.swift */,
 				0F4479CD1F71812A00393DAC /* Main.storyboard */,
+				0F4479FD1F73097100393DAC /* MutliStation.swift */,
 				0F4479D01F71812A00393DAC /* Assets.xcassets */,
 				0F4479D21F71812A00393DAC /* LaunchScreen.storyboard */,
 				0F4479D51F71812A00393DAC /* Info.plist */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F4479CC1F71812A00393DAC /* ViewController.swift in Sources */,
+				0F4479FE1F73097100393DAC /* MutliStation.swift in Sources */,
 				0F4479CA1F71812A00393DAC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +511,7 @@
 				0F4479F01F71812A00393DAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0F4479F11F71812A00393DAC /* Build configuration list for PBXNativeTarget "Multiplication AppTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +520,7 @@
 				0F4479F31F71812A00393DAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0F4479F41F71812A00393DAC /* Build configuration list for PBXNativeTarget "Multiplication AppUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +529,7 @@
 				0F4479F61F71812A00393DAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

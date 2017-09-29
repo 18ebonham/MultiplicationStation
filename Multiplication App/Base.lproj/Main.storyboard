@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Multiplication_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,80 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="dip-JF-dNb">
+                                <rect key="frame" x="86" y="180" width="203" height="120"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LrR-mq-9uh">
+                                        <rect key="frame" x="0.0" y="0.0" width="203" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Answer: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNX-of-0l5">
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="(numbers only)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WbS-4L-EAq">
+                                                <rect key="frame" x="88" y="0.0" width="115" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="115" id="A6s-6D-1wS" userLabel="width = 50"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWo-aE-Pmh">
+                                        <rect key="frame" x="0.0" y="45" width="203" height="30"/>
+                                        <state key="normal" title="Check my Answer"/>
+                                        <connections>
+                                            <action selector="checkAnswerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o20-Yw-7jZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Co9-5F-HQe">
+                                        <rect key="frame" x="0.0" y="90" width="203" height="30"/>
+                                        <state key="normal" title="Try Another Math Fact"/>
+                                        <connections>
+                                            <action selector="playAgainButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zXd-Op-NV2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="LWo-aE-Pmh" firstAttribute="width" secondItem="dip-JF-dNb" secondAttribute="width" id="cGO-jP-7jF"/>
+                                    <constraint firstItem="Co9-5F-HQe" firstAttribute="width" secondItem="dip-JF-dNb" secondAttribute="width" id="pGv-YY-Mbb"/>
+                                    <constraint firstItem="LrR-mq-9uh" firstAttribute="width" secondItem="dip-JF-dNb" secondAttribute="width" id="vyT-53-SZ3"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multiplication Station" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2P-mU-3vN">
+                                <rect key="frame" x="0.0" y="80" width="375" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="O1T-GE-9S0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="dip-JF-dNb" secondAttribute="trailing" constant="70" id="CVl-e1-Lls" userLabel="trailingMargin = Stack View.trailing + 70"/>
+                            <constraint firstItem="u2P-mU-3vN" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Fd1-7d-hZl"/>
+                            <constraint firstItem="dip-JF-dNb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="70" id="Xhp-Kk-8ls" userLabel="Stack View.leading = leadingMargin + 70"/>
+                            <constraint firstItem="dip-JF-dNb" firstAttribute="top" secondItem="u2P-mU-3vN" secondAttribute="bottom" constant="20" id="aex-xF-dX0"/>
+                            <constraint firstItem="u2P-mU-3vN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="80" id="n6W-kU-IFF"/>
+                            <constraint firstItem="u2P-mU-3vN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tyj-no-N9g"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="guess" destination="WbS-4L-EAq" id="Sfr-ap-oke"/>
+                        <outlet property="label" destination="u2P-mU-3vN" id="J76-Za-GqA"/>
+                        <outlet property="questionText" destination="UNX-of-0l5" id="7Wf-2H-dUJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
     </scenes>
 </document>
