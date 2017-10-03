@@ -12,6 +12,7 @@ import Foundation
 class Game {
     var firstFactor = 0
     var secondFactor = 0
+    var count = 0
     
     
     // generate random factor
@@ -28,12 +29,14 @@ class Game {
     }
     
     
-    // check user guess
+    // check user guess --> return response and score
     func checkQuestion(guess: Int) -> String {
         if (guess != (firstFactor * secondFactor)){
-            return "Not quite... Looks like you need to brush up on your math facts. Try again."
+            count = count - 1
+            return "Not quite. 🤔 Looks like you need to brush up on your math. Try again."
         } else {
-            return "That's correct! You are a bonafide genius!"
+            count = count + 1
+            return "That's correct! You are a bonafide genius! 🤓"
         }
     }
 }

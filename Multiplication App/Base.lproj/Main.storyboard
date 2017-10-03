@@ -23,42 +23,57 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="dip-JF-dNb">
-                                <rect key="frame" x="86" y="180" width="203" height="120"/>
+                                <rect key="frame" x="86" y="180" width="203" height="153"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LrR-mq-9uh">
                                         <rect key="frame" x="0.0" y="0.0" width="203" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Answer: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNX-of-0l5">
                                                 <rect key="frame" x="0.0" y="0.0" width="88" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="(numbers only)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WbS-4L-EAq">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="(numbers only)" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="WbS-4L-EAq">
                                                 <rect key="frame" x="88" y="0.0" width="115" height="30"/>
+                                                <color key="backgroundColor" red="0.98032003489847719" green="0.99002617385786806" blue="0.99002617385786806" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="115" id="A6s-6D-1wS" userLabel="width = 50"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWo-aE-Pmh">
-                                        <rect key="frame" x="0.0" y="45" width="203" height="30"/>
-                                        <state key="normal" title="Check my Answer"/>
+                                        <rect key="frame" x="0.0" y="45" width="203" height="32"/>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
+                                        <state key="normal" title="Check my Answer">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <action selector="checkAnswerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o20-Yw-7jZ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Co9-5F-HQe">
-                                        <rect key="frame" x="0.0" y="90" width="203" height="30"/>
-                                        <state key="normal" title="Try Another Math Fact"/>
+                                        <rect key="frame" x="0.0" y="92" width="203" height="32"/>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
+                                        <state key="normal" title="Try Another Math Fact">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <action selector="playAgainButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zXd-Op-NV2"/>
                                         </connections>
                                     </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Score: 0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kGz-Pa-3go">
+                                        <rect key="frame" x="77.5" y="139" width="48" height="14"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="LWo-aE-Pmh" firstAttribute="width" secondItem="dip-JF-dNb" secondAttribute="width" id="cGO-jP-7jF"/>
@@ -66,17 +81,17 @@
                                     <constraint firstItem="LrR-mq-9uh" firstAttribute="width" secondItem="dip-JF-dNb" secondAttribute="width" id="vyT-53-SZ3"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multiplication Station" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2P-mU-3vN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multiplication Station" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2P-mU-3vN">
                                 <rect key="frame" x="0.0" y="80" width="375" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="O1T-GE-9S0"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="27"/>
+                                <color key="textColor" red="0.54624656035886598" green="0.55165494214459732" blue="0.55165494214459732" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.96485955393408807" green="0.99283499892592197" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="dip-JF-dNb" secondAttribute="trailing" constant="70" id="CVl-e1-Lls" userLabel="trailingMargin = Stack View.trailing + 70"/>
                             <constraint firstItem="u2P-mU-3vN" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Fd1-7d-hZl"/>
@@ -90,6 +105,7 @@
                         <outlet property="guess" destination="WbS-4L-EAq" id="Sfr-ap-oke"/>
                         <outlet property="label" destination="u2P-mU-3vN" id="J76-Za-GqA"/>
                         <outlet property="questionText" destination="UNX-of-0l5" id="7Wf-2H-dUJ"/>
+                        <outlet property="score" destination="kGz-Pa-3go" id="FQI-gD-2i4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
