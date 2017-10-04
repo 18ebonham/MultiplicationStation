@@ -81,17 +81,18 @@
                                     <constraint firstItem="LrR-mq-9uh" firstAttribute="width" secondItem="dip-JF-dNb" secondAttribute="width" id="vyT-53-SZ3"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multiplication Station" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2P-mU-3vN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multiplication Station" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2P-mU-3vN">
                                 <rect key="frame" x="0.0" y="80" width="375" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="O1T-GE-9S0"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="27"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="23"/>
                                 <color key="textColor" red="0.54624656035886598" green="0.55165494214459732" blue="0.55165494214459732" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.96485955393408807" green="0.99283499892592197" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="dip-JF-dNb" secondAttribute="trailing" constant="70" id="CVl-e1-Lls" userLabel="trailingMargin = Stack View.trailing + 70"/>
                             <constraint firstItem="u2P-mU-3vN" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Fd1-7d-hZl"/>

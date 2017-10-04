@@ -45,8 +45,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 score.text = "Score: \(game.count)"
             } else {
                 //digits only alert
-                let alertController = UIAlertController(title: "Invalid Input", message:
-                    "Enter Digits Only", preferredStyle: UIAlertControllerStyle.alert)
+                let alertController = UIAlertController(title: "Woah There!", message:
+                    "Please Enter Whole Numbers Only", preferredStyle: UIAlertControllerStyle.alert)
                 alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
                 
                 self.present(alertController, animated: true, completion: nil)
