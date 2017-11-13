@@ -1,15 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PxI-db-iPg">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Georgia.ttf">
+            <string>Georgia</string>
+        </array>
+    </customFonts>
     <scenes>
+        <!--Game-->
+        <scene sceneID="nkL-9j-Pih">
+            <objects>
+                <navigationController id="6fT-xb-u6D" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Game" id="0nn-yP-EkD"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="A8o-gH-58o">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="S6V-mF-e2y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aDd-mT-nRI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-692" y="136"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="Dyw-yo-QNv">
+            <objects>
+                <tabBarController id="PxI-db-iPg" customClass="TabBarViewController" customModule="Multiplication_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wvN-nB-zAq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="6fT-xb-u6D" kind="relationship" relationship="viewControllers" id="Tc4-0r-oeu"/>
+                        <segue destination="Rdg-09-Idq" kind="relationship" relationship="viewControllers" id="Rli-bW-619"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aeo-Iu-TEm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1626" y="136"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -22,86 +62,93 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="dip-JF-dNb">
-                                <rect key="frame" x="86" y="180" width="203" height="153"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="YEo-oS-ZDH">
+                                <rect key="frame" x="128.5" y="248.5" width="118" height="120"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LrR-mq-9uh">
-                                        <rect key="frame" x="0.0" y="0.0" width="203" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="t6A-fm-LR9">
+                                        <rect key="frame" x="0.0" y="0.0" width="118" height="66"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Answer: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNX-of-0l5">
-                                                <rect key="frame" x="0.0" y="0.0" width="88" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWo-aE-Pmh">
+                                                <rect key="frame" x="0.0" y="0.0" width="118" height="32"/>
                                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="(numbers only)" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="WbS-4L-EAq">
-                                                <rect key="frame" x="88" y="0.0" width="115" height="30"/>
-                                                <color key="backgroundColor" red="0.98032003489847719" green="0.99002617385786806" blue="0.99002617385786806" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="115" id="A6s-6D-1wS" userLabel="width = 50"/>
-                                                </constraints>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                            </textField>
+                                                <state key="normal" title="Check ✏️">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="checkAnswerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o20-Yw-7jZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Co9-5F-HQe">
+                                                <rect key="frame" x="0.0" y="34" width="118" height="32"/>
+                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
+                                                <state key="normal" title="Try Another 🔄">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="playAgainButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zXd-Op-NV2"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWo-aE-Pmh">
-                                        <rect key="frame" x="0.0" y="45" width="203" height="32"/>
-                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
-                                        <state key="normal" title="Check my Answer">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="checkAnswerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o20-Yw-7jZ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Co9-5F-HQe">
-                                        <rect key="frame" x="0.0" y="92" width="203" height="32"/>
-                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
-                                        <state key="normal" title="Try Another Math Fact">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="playAgainButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zXd-Op-NV2"/>
-                                        </connections>
-                                    </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Score: 0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kGz-Pa-3go">
-                                        <rect key="frame" x="77.5" y="139" width="48" height="14"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="35" y="106" width="48" height="14"/>
+                                        <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="12"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="LWo-aE-Pmh" firstAttribute="width" secondItem="dip-JF-dNb" secondAttribute="width" id="cGO-jP-7jF"/>
-                                    <constraint firstItem="Co9-5F-HQe" firstAttribute="width" secondItem="dip-JF-dNb" secondAttribute="width" id="pGv-YY-Mbb"/>
-                                    <constraint firstItem="LrR-mq-9uh" firstAttribute="width" secondItem="dip-JF-dNb" secondAttribute="width" id="vyT-53-SZ3"/>
+                                    <constraint firstItem="t6A-fm-LR9" firstAttribute="top" secondItem="YEo-oS-ZDH" secondAttribute="top" id="R7z-Og-csM"/>
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multiplication Station" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2P-mU-3vN">
-                                <rect key="frame" x="0.0" y="80" width="375" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="O1T-GE-9S0"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="97" width="375" height="26.5"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="23"/>
-                                <color key="textColor" red="0.54624656035886598" green="0.55165494214459732" blue="0.55165494214459732" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="af7-NJ-67Z">
+                                <rect key="frame" x="82" y="198.5" width="211.5" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Answer: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNX-of-0l5">
+                                        <rect key="frame" x="0.0" y="0.0" width="94.5" height="30"/>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
+                                        <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="(numbers only)" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="WbS-4L-EAq">
+                                        <rect key="frame" x="94.5" y="0.0" width="117" height="30"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.96485955393408807" green="0.99283499892592197" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94467047000000004" green="0.9808600099" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="dip-JF-dNb" secondAttribute="trailing" constant="70" id="CVl-e1-Lls" userLabel="trailingMargin = Stack View.trailing + 70"/>
+                            <constraint firstItem="af7-NJ-67Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ADO-uM-JfH"/>
+                            <constraint firstItem="u2P-mU-3vN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EtD-4h-eWQ"/>
+                            <constraint firstItem="af7-NJ-67Z" firstAttribute="top" secondItem="u2P-mU-3vN" secondAttribute="bottom" constant="75" id="F1B-ZK-QKH"/>
                             <constraint firstItem="u2P-mU-3vN" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Fd1-7d-hZl"/>
-                            <constraint firstItem="dip-JF-dNb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="70" id="Xhp-Kk-8ls" userLabel="Stack View.leading = leadingMargin + 70"/>
-                            <constraint firstItem="dip-JF-dNb" firstAttribute="top" secondItem="u2P-mU-3vN" secondAttribute="bottom" constant="20" id="aex-xF-dX0"/>
-                            <constraint firstItem="u2P-mU-3vN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="80" id="n6W-kU-IFF"/>
+                            <constraint firstItem="YEo-oS-ZDH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qtd-O4-M08"/>
+                            <constraint firstItem="YEo-oS-ZDH" firstAttribute="top" secondItem="af7-NJ-67Z" secondAttribute="bottom" constant="20" id="leM-2a-iAL"/>
+                            <constraint firstItem="u2P-mU-3vN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="33" id="n6W-kU-IFF"/>
                             <constraint firstItem="u2P-mU-3vN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tyj-no-N9g"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="27z-Rr-YNW">
+                        <barButtonItem key="rightBarButtonItem" title="See Answer" id="ugt-DM-bgJ">
+                            <connections>
+                                <segue destination="lvU-jY-9bN" kind="show" id="YBa-b8-e1Q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="guess" destination="WbS-4L-EAq" id="Sfr-ap-oke"/>
                         <outlet property="label" destination="u2P-mU-3vN" id="J76-Za-GqA"/>
@@ -112,6 +159,115 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="CZi-t9-1D7">
+            <objects>
+                <viewController id="Rdg-09-Idq" customClass="SettingsViewController" customModule="Multiplication_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2es-gr-XVm"/>
+                        <viewControllerLayoutGuide type="bottom" id="y81-vS-G9K"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rw0-To-n3I">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fFi-Lx-sVv">
+                                <rect key="frame" x="16" y="80" width="343" height="149"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vkC-Bw-nBU">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="149"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings ⚙️" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rzs-Vo-QVY">
+                                                <rect key="frame" x="68.5" y="0.0" width="206.5" height="49"/>
+                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="43"/>
+                                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9Vq-iG-M8I">
+                                                <rect key="frame" x="62" y="69" width="219" height="28"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty Level:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4B-fU-yuq">
+                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="28"/>
+                                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
+                                                        <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="id5-EG-Rgf">
+                                                        <rect key="frame" x="130" y="0.0" width="89" height="29"/>
+                                                        <segments>
+                                                            <segment title="Easy"/>
+                                                            <segment title="Hard"/>
+                                                        </segments>
+                                                        <color key="tintColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </segmentedControl>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dct-0M-AwY">
+                                                <rect key="frame" x="154" y="117" width="35" height="32"/>
+                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
+                                                <color key="tintColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Save"/>
+                                                <connections>
+                                                    <action selector="saveSettingsButton:" destination="Rdg-09-Idq" eventType="touchUpInside" id="uMX-Y6-j39"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="vkC-Bw-nBU" firstAttribute="centerX" secondItem="fFi-Lx-sVv" secondAttribute="centerX" id="izw-YE-b93"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94467047000000004" green="0.9808600099" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="fFi-Lx-sVv" secondAttribute="trailing" id="HTw-TH-8rs" userLabel="trailingMargin = Stack View.trailing + 0"/>
+                            <constraint firstItem="fFi-Lx-sVv" firstAttribute="top" secondItem="2es-gr-XVm" secondAttribute="bottom" constant="60" id="MOD-xD-aec"/>
+                            <constraint firstItem="fFi-Lx-sVv" firstAttribute="leading" secondItem="Rw0-To-n3I" secondAttribute="leadingMargin" id="Tp7-bn-aWl" userLabel="Stack View.leading = leadingMargin + 0"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" id="qfe-eZ-p4U"/>
+                    <connections>
+                        <outlet property="difficultyLevelSegmentedControl" destination="id5-EG-Rgf" id="TdT-vX-dc7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="15A-O0-Dea" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1626" y="944"/>
+        </scene>
+        <!--Answer View Controller-->
+        <scene sceneID="FpA-H4-rgK">
+            <objects>
+                <viewController id="lvU-jY-9bN" customClass="AnswerViewController" customModule="Multiplication_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gI9-hE-YY6"/>
+                        <viewControllerLayoutGuide type="bottom" id="o4o-HL-eeC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WCG-8L-ITA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hint!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zc-i7-0eW">
+                                <rect key="frame" x="131" y="303.5" width="114" height="60.5"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="53"/>
+                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94467047002441884" green="0.98086000992076494" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0zc-i7-0eW" firstAttribute="centerX" secondItem="WCG-8L-ITA" secondAttribute="centerX" id="0Fh-Bl-yOH"/>
+                            <constraint firstItem="0zc-i7-0eW" firstAttribute="centerY" secondItem="WCG-8L-ITA" secondAttribute="centerY" id="NMf-OE-6Hi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="0zc-i7-0eW" id="d1v-pe-486"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4KP-jS-afv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="965.60000000000002" y="136.28185907046478"/>
         </scene>
     </scenes>
 </document>

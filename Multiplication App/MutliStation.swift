@@ -13,14 +13,18 @@ class Game {
     var firstFactor = 0
     var secondFactor = 0
     var count = 0
-    
+    var difficultyLevel = 0
     
     // generate random factor
     func getFactor() -> Int {
-        let factor = Int(arc4random_uniform(10)) + 1
-        return factor
+        if (difficultyLevel == 0){
+            let factor = Int(arc4random_uniform(10)) + 1
+            return factor
+        } else {
+            let factor = Int(arc4random_uniform(50)) + 1
+            return factor
+        }
     }
-    
     
     // generate question factors
     func generateQuestion(){
@@ -28,10 +32,15 @@ class Game {
         secondFactor = getFactor()
     }
     
+    //generate answer
+    func generateAnswer() -> Int {
+        let answer = firstFactor * secondFactor
+        return answer
+    }
     
     // check user guess --> return response and score
     func checkQuestion(guess: Int) -> String {
-        if (guess != (firstFactor * secondFactor)){
+        if (guess != generateAnswer()){
             count = count - 1
             return "Not quite. 🤔 Looks like you need to brush up on your math. Try again."
         } else {

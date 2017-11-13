@@ -15,6 +15,9 @@
 		0F4479DF1F71812A00393DAC /* Multiplication_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4479DE1F71812A00393DAC /* Multiplication_AppTests.swift */; };
 		0F4479EA1F71812A00393DAC /* Multiplication_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4479E91F71812A00393DAC /* Multiplication_AppUITests.swift */; };
 		0F4479FE1F73097100393DAC /* MutliStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4479FD1F73097100393DAC /* MutliStation.swift */; };
+		0F76F9551FAB95010073B111 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76F9541FAB95010073B111 /* TabBarViewController.swift */; };
+		0FEA9DD71F91653400AE13F8 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEA9DD61F91653400AE13F8 /* AnswerViewController.swift */; };
+		0FEA9DF71FA13D1300AE13F8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEA9DF61FA13D1300AE13F8 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		0F4479E91F71812A00393DAC /* Multiplication_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multiplication_AppUITests.swift; sourceTree = "<group>"; };
 		0F4479EB1F71812A00393DAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F4479FD1F73097100393DAC /* MutliStation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutliStation.swift; sourceTree = "<group>"; };
+		0F76F9541FAB95010073B111 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		0FEA9DD61F91653400AE13F8 /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
+		0FEA9DF61FA13D1300AE13F8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,9 @@
 				0F4479C91F71812A00393DAC /* AppDelegate.swift */,
 				0F4479CB1F71812A00393DAC /* ViewController.swift */,
 				0F4479CD1F71812A00393DAC /* Main.storyboard */,
+				0F76F9541FAB95010073B111 /* TabBarViewController.swift */,
+				0FEA9DF61FA13D1300AE13F8 /* SettingsViewController.swift */,
+				0FEA9DD61F91653400AE13F8 /* AnswerViewController.swift */,
 				0F4479FD1F73097100393DAC /* MutliStation.swift */,
 				0F4479D01F71812A00393DAC /* Assets.xcassets */,
 				0F4479D21F71812A00393DAC /* LaunchScreen.storyboard */,
@@ -191,20 +200,24 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Hartley Bonham";
 				TargetAttributes = {
 					0F4479C51F71812A00393DAC = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = EQ38833CNC;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					0F4479D91F71812A00393DAC = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 0F4479C51F71812A00393DAC;
 					};
 					0F4479E41F71812A00393DAC = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 0F4479C51F71812A00393DAC;
 					};
@@ -262,8 +275,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FEA9DD71F91653400AE13F8 /* AnswerViewController.swift in Sources */,
 				0F4479CC1F71812A00393DAC /* ViewController.swift in Sources */,
 				0F4479FE1F73097100393DAC /* MutliStation.swift in Sources */,
+				0FEA9DF71FA13D1300AE13F8 /* SettingsViewController.swift in Sources */,
+				0F76F9551FAB95010073B111 /* TabBarViewController.swift in Sources */,
 				0F4479CA1F71812A00393DAC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,7 +345,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -337,7 +355,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -380,7 +402,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -388,7 +412,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -418,11 +446,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EQ38833CNC;
 				INFOPLIST_FILE = "Multiplication App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Bonham.Multiplication-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -430,11 +460,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EQ38833CNC;
 				INFOPLIST_FILE = "Multiplication App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Bonham.Multiplication-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -447,7 +479,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Bonham.Multiplication-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Multiplication App.app/Multiplication App";
 			};
 			name = Debug;
@@ -461,7 +494,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Bonham.Multiplication-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Multiplication App.app/Multiplication App";
 			};
 			name = Release;
@@ -474,7 +508,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Bonham.Multiplication-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = "Multiplication App";
 			};
 			name = Debug;
@@ -487,7 +522,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Bonham.Multiplication-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = "Multiplication App";
 			};
 			name = Release;
