@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate {
     
     
+    @IBOutlet weak var checkAnswerButton: UIButton!
+    
     @IBOutlet weak var label: UILabel!
     
     @IBOutlet weak var guess: UITextField!
@@ -21,6 +23,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkAnswerButton.isEnabled = true
         guess.delegate = self
         if let parentVC = self.tabBarController as? TabBarViewController {
             parentVC.game.generateQuestion()
@@ -28,6 +31,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             questionText.text = "\(parentVC.game.firstFactor) x \(parentVC.game.secondFactor) = "
             score.text = "Score: \(parentVC.game.count)"
         self.guess.delegate = self //just added this in for hiding the keyboard
+            
         }
         
         // Do any additional setup after loading the view, typically from a nib.
@@ -69,6 +73,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 if let guess = Int(textEntry) {
                     label.text = parentVC.game.checkQuestion(guess: guess)
                     score.text = "Score: \(parentVC.game.count)"
+                    if label.text == "That's correct! You are a bonafide genius! 🤓" {
+            sender.isEnabled = false
+                    }
                 } else {
                     //digits only alert
                     let alertController = UIAlertController(title: "Woah There!", message:
@@ -88,6 +95,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         questionText.text = "\(parentVC.game.firstFactor) x \(parentVC.game.secondFactor) = "
             label.text = "Now try this:"
         guess.text = ""
+        checkAnswerButton.isEnabled = true
         }
     }
 }

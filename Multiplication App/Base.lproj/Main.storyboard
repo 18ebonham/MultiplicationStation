@@ -19,7 +19,7 @@
         <scene sceneID="nkL-9j-Pih">
             <objects>
                 <navigationController id="6fT-xb-u6D" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Game" id="0nn-yP-EkD"/>
+                    <tabBarItem key="tabBarItem" title="Game" selectedImage="game" id="0nn-yP-EkD"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="A8o-gH-58o">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -30,7 +30,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aDd-mT-nRI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-692" y="136"/>
+            <point key="canvasLocation" x="-1620" y="61"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="Dyw-yo-QNv">
@@ -48,7 +48,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aeo-Iu-TEm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1626" y="136"/>
+            <point key="canvasLocation" x="-2785" y="389"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -72,7 +72,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="118" height="32"/>
                                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
                                                 <state key="normal" title="Check ✏️">
-                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
@@ -150,6 +150,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="checkAnswerButton" destination="LWo-aE-Pmh" id="syJ-Nj-niX"/>
                         <outlet property="guess" destination="WbS-4L-EAq" id="Sfr-ap-oke"/>
                         <outlet property="label" destination="u2P-mU-3vN" id="J76-Za-GqA"/>
                         <outlet property="questionText" destination="UNX-of-0l5" id="7Wf-2H-dUJ"/>
@@ -158,7 +159,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+            <point key="canvasLocation" x="-780" y="61"/>
         </scene>
         <!--Settings-->
         <scene sceneID="CZi-t9-1D7">
@@ -227,14 +228,14 @@
                             <constraint firstItem="fFi-Lx-sVv" firstAttribute="leading" secondItem="Rw0-To-n3I" secondAttribute="leadingMargin" id="Tp7-bn-aWl" userLabel="Stack View.leading = leadingMargin + 0"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="qfe-eZ-p4U"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="qfe-eZ-p4U"/>
                     <connections>
                         <outlet property="difficultyLevelSegmentedControl" destination="id5-EG-Rgf" id="TdT-vX-dc7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15A-O0-Dea" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1626" y="944"/>
+            <point key="canvasLocation" x="-1620" y="850"/>
         </scene>
         <!--Answer View Controller-->
         <scene sceneID="FpA-H4-rgK">
@@ -267,7 +268,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4KP-jS-afv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="965.60000000000002" y="136.28185907046478"/>
+            <point key="canvasLocation" x="54" y="61"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="game" width="128" height="128"/>
+        <image name="settings" width="100" height="100"/>
+    </resources>
 </document>
