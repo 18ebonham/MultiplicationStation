@@ -27,9 +27,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         guess.delegate = self
         if let parentVC = self.tabBarController as? TabBarViewController {
             parentVC.game.generateQuestion()
-            label.text = "Welcome to The Multiplication Station 👋🏻"
+            label.text = ""
             questionText.text = "\(parentVC.game.firstFactor) x \(parentVC.game.secondFactor) = "
-            score.text = "Score: \(parentVC.game.count)"
+            score.text = "Score: \(parentVC.game.count) 🏅"
         self.guess.delegate = self //just added this in for hiding the keyboard
             
         }
